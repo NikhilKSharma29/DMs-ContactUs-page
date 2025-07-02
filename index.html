@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWorks | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#">About Us</a>
+            <a href="#">Works</a>
+            <a href="#" class="active">Contact</a>
+        </div>
+        <div class="logo">DreamWorks</div>
+        <div class="nav-right">
+            <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="primary-btn">Get Started</a>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <div class="contact-header">
+            <h1 class="contact-heading">Contact Us</h1>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Indore, MP</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="far fa-calendar-alt"></i></div>
+                    <div>
+                        <h3>Year</h3>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="far fa-clock"></i></div>
+                    <div>
+                        <h3>Office hours</h3>
+                        <p>Monday – Friday<br>11 AM – 2 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group double">
+                        <div class="form-field">
+                            <input type="text" id="first-name" placeholder=" " required>
+                            <label for="first-name">First Name</label>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" id="last-name" placeholder=" " required>
+                            <label for="last-name">Last Name</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <select id="service" required>
+                            <option value="" disabled selected></option>
+                            <option value="web-design">Web Design</option>
+                            <option value="branding">Branding</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="service">Service</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Sign up for news and updates</label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <textarea id="project" rows="4" placeholder=" " required></textarea>
+                        <label for="project">Project description</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Submit</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <div class="contact-line">
+                    <i class="far fa-envelope"></i>
+                    <p>contact@dreamworks.com</p>
+                </div>
+                <div class="contact-line">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(+48) 762 864 075</p>
+                </div>
+                <div class="contact-line">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Indore, MP<br>Monday – Friday, 11 AM – 2 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-menu">
+                <div class="menu-links">
+                    <a href="#">Say hello</a>
+                    <a href="#">Work with us</a>
+                    <a href="#">Privacy policy</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 DreamWorks. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
