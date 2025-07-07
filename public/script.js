@@ -130,9 +130,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(({ success, data, error }) => {
           if (success && data.success) {
             setSubmitButtonState(false, true);
-            showSuccess(
-              data.message || "Thank you! Your message has been sent."
-            );
+            // Redirect to thank you page after a short delay to show success state
+            setTimeout(() => {
+              window.location.href = "/thankyou.html";
+            }, 1500);
+            return; // Exit early since we're redirecting
           } else {
             setSubmitButtonState(false);
             const errorMessage =
