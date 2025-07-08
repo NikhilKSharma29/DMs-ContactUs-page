@@ -105,26 +105,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const formData = new FormData(form);
 
-      // Simulate network delay for demo (remove in production)
-      const submitPromise = new Promise((resolve) => {
-        setTimeout(() => {
-          fetch("/api/contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(Object.fromEntries(formData)),
-          })
-            .then((response) => response.json())
-            .then((data) => resolve({ success: true, data }))
-            .catch((error) =>
-              resolve({
-                success: false,
-                error: error.message || "Network error occurred",
-              })
-            );
-        }, 1000); // 1 second delay for demo
-      });
+      // Submit form to Netlify function
+      const submitPromise = fetch("/.netlify/functions/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => ({
+        success: true,
+        data
+      }))
+      .catch((error) => ({
+        success: false,
+        error: error.message || "Network error occurred"
+      }));
 
       submitPromise
         .then(({ success, data, error }) => {

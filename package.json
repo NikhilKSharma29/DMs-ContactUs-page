@@ -1,14 +1,19 @@
 {
   "name": "contact-form",
   "version": "1.0.0",
-  "description": "Simple contact form with Express backend",
+  "description": "Contact form with Netlify Functions",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'Build script completed'"
   },
   "dependencies": {
+    "@netlify/functions": "^1.5.0",
     "cors": "^2.8.5",
     "dotenv": "^17.0.1",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.0.0"
   }
 }
